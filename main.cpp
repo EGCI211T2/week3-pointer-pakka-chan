@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#define SIZE 10
+//#define SIZE 10
 
 using namespace std;
 
@@ -10,7 +10,7 @@ int n =argc-1;
 
   pa=new int[n];
 
-  for(i=0;i<n;i++){
+  for(i=0;i<n;i++, pa++){
 
    // cout<<"Input no."<<i<<":";
 
@@ -23,7 +23,7 @@ int n =argc-1;
   pa-=n;
 
 cout<<"Original: ";
-for (i=0; i<SIZE-1; i++ ,pa++){
+for (i=0; i<n-1; i++ ,pa++){
    cout<<setw(3)<<*pa ;//<<endl;
   //cout<<pa<<endl;
 }
@@ -31,7 +31,7 @@ cout<<setw(3)<<*pa<<endl;
 pb=pa;
 pa -= (n-1);
 
-for (i=0; i<SIZE/2; i++)
+for (i=0; i<n/2; i++)
 {
    temp = *pa;  
    *pa = *pb;  
@@ -52,7 +52,7 @@ for (i=0; i<SIZE/2; i++)
 pa=&a[0];
 pb-=SIZE/2;*/
 cout<<"Reversed: ";
-for (i=0; i<SIZE-1; i++ ,pa++){
+for (i=0; i<n-1; i++ ,pa++){
    cout<<setw(3)<<*pa ;//<<endl;
   //cout<<pa<<endl;
 }
